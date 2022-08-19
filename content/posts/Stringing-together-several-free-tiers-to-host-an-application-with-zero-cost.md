@@ -12,7 +12,6 @@ readingTime = false
 hideComments = false
 +++
 
-{{< image src="/img/architecture.png" alt="Architecture" position="center" style="border-radius: 8px;" >}}
 I have a side project called [bostadsbussen](https://bostadsbussen.se). It
 scrapes property listings for the Swedish real estate market. The site needs to
 persist data in the form of user accounts, property data and images.
@@ -74,6 +73,10 @@ Cloud Run](https://cloud.google.com/run). It scales to zero, and will only run
 when it gets a scraping request. It stores images in a bucket and returns the
 scraped data to the PocketBase backend. It of course also has a free tier that
 I use! 🤓
+
+And here is a diagram of the architecture. Generated with [Diagrams as Code](https://diagrams.mingrammer.com/).
+
+{{< image src="/img/architecture.png" alt="Architecture" position="center" style="border-radius: 8px;" >}}
 
 That's it! Hope you enjoyed the post.
 
