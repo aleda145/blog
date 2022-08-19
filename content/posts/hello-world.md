@@ -67,7 +67,7 @@ chose [Cloudflare Pages](https://pages.cloudflare.com/). I don't see much
 difference between the mentioned alternatives. Since I'm already using
 Cloudflare's other services (DNS, R2) the choice was easy. (And I'm lazy).
 
-The last thing I have in my is the scraping part. Loading 100s of images
+The last thing I have in my application is the scraping part. Loading 100s of images
 concurrently and moving them to an object storage is quite memory intensive. At
 least a 256MB instance can't handle it! I offloaded the scraping part to [Google
 Cloud Run](https://cloud.google.com/run). It scales to zero, and will only run
