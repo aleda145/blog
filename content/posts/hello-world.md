@@ -63,7 +63,7 @@ We also need a frontend. I'll admit I'm not very good at the frontend stuff, I
 built one with React! It was quite enjoyable. For hosting a React app there are
 several free options. Like [Vercel](https://vercel.com/),
 [Netlify](https://www.netlify.com/) and [Render](https://render.com/). But I
-choose [Cloudflare Pages](https://pages.cloudflare.com/). I don't see much
+chose [Cloudflare Pages](https://pages.cloudflare.com/). I don't see much
 difference between the mentioned alternatives. Since I'm already using
 Cloudflare's other services (DNS, R2) the choice was easy. (And I'm lazy).
 
