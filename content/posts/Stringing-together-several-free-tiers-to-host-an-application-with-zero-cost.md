@@ -84,5 +84,8 @@ And here is a diagram of the architecture. Generated with [Diagrams as Code](htt
 
 That's it! Hope you enjoyed the post.
 
+Check out [github.com/aleda145/pocketbase-lab](https://github.com/aleda145/pocketbase-lab) for a
+lab for setting up this architecture
+
 Disclaimer: I paid $10/year for the [bostadsbussen.se](https://bostadsbussen.se)
 domain.
