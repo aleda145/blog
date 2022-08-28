@@ -41,6 +41,25 @@ what if we want to do it even cheaper?
 Enter [fly.io](https://fly.io). They provide a free 256MB instance that you can
 spin up with a valid Dockerfile and `fly deploy`. Great developer experience!
 
+```bash
+❯ fly deploy
+==> Verifying app config
+--> Verified app config
+==> Building image
+Remote builder fly-builder-spring-snow-7814 ready
+==> Creating build context
+--> Creating build context done
+==> Building image with Docker
+...
+--> Building image done
+==> Pushing image to fly
+...
+==> Creating release
+--> release v8 created
+```
+
+And we have released our application on fly.io!
+
 All right, we got our free server, what should we do about persisting data? If
 we store data on the fly.io instance and if it crashes we lose everything! The
 common choice would be to spin up a separate database server and use that for
