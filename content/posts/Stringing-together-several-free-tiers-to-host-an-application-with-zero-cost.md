@@ -56,6 +56,33 @@ When it comes to cloud storage all providers are very cheap for running
 Litestream. So it comes down to developer preference. I chose [Cloudflare
 R2](https://www.cloudflare.com/products/r2/) because of their free tier.
 
+Getting Litestream to communicate with R2 is quite simple:
+
+```yaml
+# The litestream config
+
+dbs:
+  - path: /pb_data/data.db
+    replicas:
+      - type: s3
+        endpoint: ${R2_URL}
+        path: ${R2_DATA_PATH}
+        bucket: ${R2_BUCKET}
+        access-key-id: ${R2_ACCESS_KEY}
+        secret-access-key: ${R2_SECRET_KEY}
+```
+
+```bash
+# The script that restores and then continously replicates the data
+
+echo "Restore db if exists"
+litestream restore -if-replica-exists /pb_data/data.db
+echo "Restored successfully"
+
+echo "replicate!"
+exec litestream replicate -exec "/pocketbase serve --http 0.0.0.0:8090"
+```
+
 Now we need a backend to host on the server. I have been very productive with
 [PocketBase](https://pocketbase.io/). It is a go framework with several great
 features. Like user authentication, an admin panel, an extendable API and a JS
