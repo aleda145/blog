@@ -75,6 +75,8 @@ When it comes to cloud storage all providers are very cheap for running
 Litestream. So it comes down to developer preference. I chose [Cloudflare
 R2](https://www.cloudflare.com/products/r2/) because of their free tier.
 
+{{< image src="/img/r2.png" alt="r2" position="center" style="border-radius: 8px;" >}}
+
 Getting Litestream to communicate with R2 is quite simple:
 
 ```yaml
