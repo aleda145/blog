@@ -53,8 +53,8 @@ Getting all the listings took a week in real time.
 Cool! Now we have a big JSON array with a million properties.
 Now I want to visualize this on an interactive map! And share it with the internet!
 
-My first thought was to spin up a dashboarding solution like [metabase](https://www.metabase.com/) or [superset]
-(https://superset.apache.org/)
+My first thought was to spin up a dashboarding solution like [metabase](https://www.metabase.com/) or
+[superset](https://superset.apache.org/)
 on a rented VM. They are both great tools and it would have been a great option.
 But a rented VM that can handle bursty traffic could be quite expensive.
 I also don't want to deal with autoscaling stuff like kubernetes without getting paid 🤓
@@ -86,7 +86,7 @@ would be the egress fees. [GCS](https://cloud.google.com/storage/pricing#network
 charges $0.12 per GB. If I got lucky (or unlucky) and had 10000 people download the data,
 I would be looking at $30 in just egress fees. Not good for a product with zero revenue!
 
-Luckily [Cloudfare's object storage R2](https://www.cloudflare.com/products/r2/) has 0 egress
+Luckily [Cloudflare's object storage R2](https://www.cloudflare.com/products/r2/) has 0 egress
 fees. Zero! Now I could use that share the data to the user with a simple GET request.
 
 I ran into some CORS problems for the public bucket
@@ -103,8 +103,9 @@ but that was easily solved with this [guide](https://kian.org.uk/configuring-cor
 </CORSConfiguration>
 ```
 
-The map could be shared with everyone on internet, without me being worried about waking up to
-a huge cloud bill! An additional benefit was that I could [provide the full json data](https://bostadsbussen.se/sold/data).
+With the above allow all CORS, the data could be shared with everyone on internet. I don't have to be worried about waking up to
+a huge cloud bill, since it all costs zero!
+An additional benefit was that I could [provide the full json data](https://bostadsbussen.se/sold/data).
 So other interested parties don't need to hit hemnet.se servers and instead just download that file!
 
 The map is available on [https://bostadsbussen.se/sold/map](https://bostadsbussen.se/sold/map) (In Swedish!)
