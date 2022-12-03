@@ -1,10 +1,10 @@
 +++
-title = "Plotting all of Sweden's real estate prices on a heatmap with deck.gl"
-date = "2022-11-27T11:36:03+02:00"
+title = "Plotting Sweden's real estate prices on a heatmap with deck.gl and Cloudflare"
+date = "2022-12-03T11:36:03+02:00"
 author = "Alexander Dahl"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["infrastructure"]
+tags = ["infrastructure", "data visualization"]
 keywords = ["", ""]
 description = ""
 showFullContent = true
