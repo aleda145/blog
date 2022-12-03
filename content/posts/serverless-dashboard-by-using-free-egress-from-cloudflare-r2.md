@@ -92,11 +92,11 @@ would be the egress fees. [GCS](https://cloud.google.com/storage/pricing#network
 charges $0.12 per GB. If I got lucky (or unlucky) and had 10000 people download the data,
 I would be looking at $30 in just egress fees. Not good for a product with zero revenue!
 
-Luckily Cloudfare has an object storage competitor called R2, which has 0 egress
+Luckily [Cloudfare's object storage R2](https://www.cloudflare.com/products/r2/) has 0 egress
 fees. Zero! Now I could use that share the data to the user with a simple GET request.
 
 I ran into some CORS problems for the public bucket
-but that was easily solved with this (CORS guide)[https://kian.org.uk/configuring-cors-on-cloudflare-r2/]
+but that was easily solved with this [guide](https://kian.org.uk/configuring-cors-on-cloudflare-r2/).
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -109,8 +109,8 @@ but that was easily solved with this (CORS guide)[https://kian.org.uk/configurin
 </CORSConfiguration>
 ```
 
-Now I could share this with everyone on internet, without being worried about waking up to
-a huge cloud bill! An additional benefit was that I could (provide the full json data)[https://bostadsbussen.se/sold/data].
+The map could be shared with everyone on internet, without me being worried about waking up to
+a huge cloud bill! An additional benefit was that I could [provide the full json data](https://bostadsbussen.se/sold/data).
 So other interested parties don't need to hit hemnet.se servers and instead just download that file!
 
 My next steps is to include some line charts for analysis and also make sure the json blob
@@ -118,6 +118,6 @@ is updated with new data everyday. Kind of like a serverless dashboard!
 
 I'm also reaching the end of my travel sabbatical (trekking in Nepal was a highlight!).
 So I'm looking for a Data Engineering or Data Infrastructure job. Based in Stockholm or EU remote.
-Link to [resume](https://dahl.dev/assets/Alexander_Dahl.pdf)
+[Here's my resume](https://dahl.dev/assets/Alexander_Dahl.pdf)
 
-Shoot me an email at work@dahl.dev if you want to talk :)
+Shoot me an email at work@dahl.dev if you want to talk 🤓
