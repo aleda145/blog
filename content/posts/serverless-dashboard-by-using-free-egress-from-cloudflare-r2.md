@@ -21,8 +21,7 @@ Disclaimer: I will be linking to sites in Swedish. A translation extension might
 I, like a lot of people in Stockholm, need to buy an apartment. The rental situation
 is bad. Getting a ["first-hand contract"](http://www.findhousingsweden.com/first-hand-contract-forstahandskontrakt-or-hyresratt/) is hard.
 I have friends who have even had to
-settle for a temporary "third-hand" contract.
-So to clarify: The owner leases it to one person, that person subleases it, and then that person subleases it to my friend.
+settle for temporary "third-hand" contracts!
 
 With finding a rental unit out of the picture, buying is the only option.
 Buying an apartment in an [inflated market](https://www.economist.com/finance-and-economics/2022/11/24/where-the-coming-housing-crunch-will-be-most-painful)
@@ -32,7 +31,7 @@ are reasonably priced? Plot all the data points on a heatmap! Which is what I se
 
 My side project [bostadsbussen](https://bostadsbussen.se) scrapes user entered
 real estate listings from hemnet and archives them. You can read about the tech behind
-it in my [previous blogpost](https://blog.dahl.dev/posts/stringing-together-several-free-tiers-to-host-an-application-with-zero-cost/).
+it in my [previous blog post](https://blog.dahl.dev/posts/stringing-together-several-free-tiers-to-host-an-application-with-zero-cost/).
 
 All right, we have a place to host a heatmap. First we need to get the data!
 
@@ -41,48 +40,43 @@ _Picture of the closing prices page on [hemnet.se](https://hemnet.se)_
 
 Luckily the data is out there on the internet! [hemnet.se](https://www.hemnet.se/salda/bostader) provides
 the closing prices for most of their listings. The problem is that they only return max 2500 results per search query.
-So we need to craft some queries to extract all of the 1 million+ results on their site.
+So we need to craft some queries to extract all the 1 million+ results on their site.
 It was as simple as limiting the search queries by different parameters until the result
 was lower than 2500. Then extracting the data from each listing was easy.
 
 ```
-I was also very mindful of not putting unncessary load on their servers,
-and deliberately chose to not parellelize the scraping.
+I was also very mindful of not putting unnecessary load on their servers.
+I chose to not parallelize the scraping.
 Getting all the listings took a week in real time.
 ```
 
-Cool! Now we have a big JSON array with a million data points.
-After some quick processing in python I had each property's coordinates, square meter price and
-the date it was sold.
-
-Now I want to vizualise this on an interactive map! And share it with the internet!
+Cool! Now we have a big JSON array with a million properties.
+Now I want to visualize this on an interactive map! And share it with the internet!
 
 My first thought was to spin up a dashboarding solution like [metabase](https://www.metabase.com/) or [superset]
 (https://superset.apache.org/)
 on a rented VM. They are both great tools and it would have been a great option.
 But a rented VM that can handle bursty traffic could be quite expensive.
-I also don't really want to deal with autoscaling stuff like kubernetes without getting paid 🤓
+I also don't want to deal with autoscaling stuff like kubernetes without getting paid 🤓
 
-So I would need to build the vizualisation myself to get around renting a VM.
+So I would need to build the visualization myself to get around renting a VM.
 I found [deck.gl](https://deck.gl) which
-is great for displaying large amounts of data on a map. Perfect! It had support
-for React as well, which is what the rest of the site is built with.
+is great for displaying large amounts of data on a map. Perfect!
 
-We also need some map tiles that we can overlay the vizualisation from deck.gl on.
-Mapbox has an excellent free tier where the first 50000 views per month doesn't
+We also need some map tiles that we can overlay the visualization from deck.gl on.
+[Mapbox](https://www.mapbox.com/) has an excellent free tier where the first 50000 views per month doesn't
 cost anything. I doubt I will ever get more traffic than that.
 
 {{< image src="/img/sweden_map.jpg" alt="map" position="center" style="border-radius: 8px" >}}
+_The heat map of southern Sweden (where all the reasonable people live (sorry Norrland))_
 
 OK, with this built locally on my machine I had a pretty cool visualization.
-I think I spent an hour dragging the map around Sweden to see if my
+I spent an hour dragging the map around Sweden to see if my
 pre-conceived notions about expensive areas was true. It was!
 (The Östermalm area in Stockholm is really expensive)
 
-Since the application is hosted on Cloudflare Pages, and everything was built
-with React, hosting the visualization there was a no brainer.
-
-But it's not really a visualization if there is no `data` to vizualise.
+It works locally, now we need to host it! I chose [Cloudflare Pages](https://pages.cloudflare.com/) for this.
+But it's not really a visualization if there is no `data` to visualize.
 
 This leads us to the problem of getting the data to the user.
 
@@ -113,11 +107,13 @@ The map could be shared with everyone on internet, without me being worried abou
 a huge cloud bill! An additional benefit was that I could [provide the full json data](https://bostadsbussen.se/sold/data).
 So other interested parties don't need to hit hemnet.se servers and instead just download that file!
 
+The map is available on [https://bostadsbussen.se/sold/map](https://bostadsbussen.se/sold/map) (In Swedish!)
+
 My next steps is to include some line charts for analysis and also make sure the json blob
 is updated with new data everyday. Kind of like a serverless dashboard!
 
 I'm also reaching the end of my travel sabbatical (trekking in Nepal was a highlight!).
-So I'm looking for a Data Engineering or Data Infrastructure job. Based in Stockholm or EU remote.
+So I'm looking for a Data Engineering or Infrastructure job. Based in Stockholm or EU remote.
 [Here's my resume](https://dahl.dev/assets/Alexander_Dahl.pdf)
 
 Shoot me an email at work@dahl.dev if you want to talk 🤓
