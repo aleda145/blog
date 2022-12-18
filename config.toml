@@ -75,3 +75,5 @@ paginate = 5
         identifier = "dahl"
         name = "dahl.dev"
         url = "https://dahl.dev"
+[markup.goldmark.renderer]
+  unsafe= true # to allow iframes on hugo psot
