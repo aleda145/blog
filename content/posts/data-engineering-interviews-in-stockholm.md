@@ -40,8 +40,7 @@ I was only looking for roles based in Stockholm.
 
 All processes started with a recruiter reaching out by email to schedule a phone call or a video meeting.
 In the beginning of my search it was easy to say yes to their proposed time, but after a week my calendar was quite full.
-I solved that by [Publishing my calendar online](https://blog.dahl.dev/posts/publish-your-calendar-and-let-recruiters-schedule-interviews-themselves/),
-.
+I solved that by [Publishing my calendar online](https://blog.dahl.dev/posts/publish-your-calendar-and-let-recruiters-schedule-interviews-themselves/)
 
 Most of the screenings was them telling me more about the role and the company. I also almost always got the question "Tell me a little about yourself".
 And of course I got some time to ask questions about the company. I would recommend to have some questions ready!
