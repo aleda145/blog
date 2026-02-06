@@ -143,7 +143,7 @@ I'm aiming to wow people that work professionally with SQL (Data Engineers, Anal
   My own personal treasure, available over email! Long John Silver would be super jealous
 </p>
 
-I came to realize I had been over indexing on selling collaboration. I am super excited about how awesome tldraw (the canvas I'm using) makes multiplayer. I really wanted to go all in on showcasing it.
+I came to realize I had been over indexing on selling collaboration. I am super excited about how awesome [tldraw](https://tldraw.dev) (the canvas I'm using) makes multiplayer. I really wanted to go all in on showcasing it.
 
 However, this led me to neglect selling Kavla's core utility. After all, multiplayer is something you only care about after you enjoy the product in single player.
 
