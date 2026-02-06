@@ -98,7 +98,7 @@ But I sent them a snarky email.
 
 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 20px; margin: 20px 0; color: #ddd;">
     <div style="font-weight: bold; font-size: 0.9rem; margin-bottom: 8px; color: #fff;">
-      Them
+      Them (Milan)
     </div>
     <div style="font-size: 0.95rem; line-height: 1.6;">
       Heyy! Yes i may have used you guys as an inspiration base... sorry im not even sure what your product does I just loved the landing page design.<br><br>
@@ -106,13 +106,13 @@ But I sent them a snarky email.
     </div>
 </div>
 
-Ok so they admitted to copying my design. Good for my ego!
+Ok so Milan admitted to copying my design. Good for my ego!
 
-But that they don't understand what Kavla does is concerning. I sent them a follow up email asking for more and got this response:
+But that he doesn't understand what Kavla does is concerning. I sent him a follow up email asking for more and got this response:
 
 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 20px; margin: 20px 0; color: #ddd;">
     <div style="font-weight: bold; font-size: 0.9rem; margin-bottom: 8px; color: #fff;">
-      Them
+      Milan
     </div>
     <div style="font-size: 0.95rem; line-height: 1.6;">
         <p>Honestly to tell you the truth looking at Kavla again I still don't understand what service you are providing. And I've been on the site a fair few times as I was using the look & feel as a direct inspiration.
@@ -154,3 +154,5 @@ I also tried to tighten it so it's clearer what the value prop is:
 The new landing page is available on [kavla.dev](https://kavla.dev). Check it out!
 
 Shoot me an email, I'd love to know what you think (alex@kavla.dev). And try the product too!
+
+Also have a look at Milan's company [Conference Cowboy](https://conferencecowboy.app/). He's building a white label event app. Awesome guy!
